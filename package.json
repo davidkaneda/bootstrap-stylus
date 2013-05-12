@@ -1,0 +1,23 @@
+{
+  "name": "bootstrap-stylus",
+  "version": "2.3.1",
+  "description": "Port of Twitter Bootstrap 2.3.1 to Stylus",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://davidkaneda@github.com/davidkaneda/bootstrap-stylus.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "7b085be89dd0e58db4ecb46b3170531fa7c56181",
+  "bugs": {
+    "url": "https://github.com/davidkaneda/bootstrap-stylus/issues"
+  },
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-stylus": "~0.5.0"
+  }
+}
