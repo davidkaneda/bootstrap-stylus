@@ -90,7 +90,7 @@
 .btn-group > .btn + .dropdown-toggle
   padding-left 8px
   padding-right 8px
-  box-shadow inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow 0 1px 2px rgba(0,0,0,.05);
   *padding-top 5px
   *padding-bottom 5px
 
@@ -116,29 +116,29 @@
   // Remove the gradient and set the same inset shadow as the :active state
   .dropdown-toggle
     background-image none
-    box-shadow inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)
+    // box-shadow inset 0 2px 0 rgba(0,0,0,.08)
 
   // Keep the hover's background when dropdown is open
   .btn.dropdown-toggle
-    background-color $btnBackgroundHighlight
+    background-color darken($btnBackground,7)
 
   .btn-primary.dropdown-toggle
-    background-color $btnPrimaryBackgroundHighlight
+    background-color darken($btnPrimaryBackground,7)
 
   .btn-warning.dropdown-toggle
-    background-color $btnWarningBackgroundHighlight
+    background-color darken($btnWarningBackground,7)
 
   .btn-danger.dropdown-toggle
-    background-color $btnDangerBackgroundHighlight
+    background-color darken($btnDangerBackground,7)
 
   .btn-success.dropdown-toggle
-    background-color $btnSuccessBackgroundHighlight
+    background-color darken($btnSuccessBackground,7)
 
   .btn-info.dropdown-toggle
-    background-color $btnInfoBackgroundHighlight
+    background-color darken($btnInfoBackground,7)
 
   .btn-inverse.dropdown-toggle
-    background-color $btnInverseBackgroundHighlight
+    background-color darken($btnInverseBackground,7)
 
 // Reposition the caret
 .btn .caret

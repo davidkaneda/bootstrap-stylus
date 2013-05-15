@@ -203,10 +203,6 @@ hyphens(mode = auto)
   word-wrap break-word
   hyphens mode
 
-// Opacity
-opacity(opacity)
-  opacity (opacity/100)
-
 // BACKGROUNDS
 // --------------------------------------------------
 
@@ -275,7 +271,7 @@ nav-divider(top = #e5e5e5, bottom = $white)
   // It is unclear where IE is getting the extra space that we need
   // to negative-margin away, but so it goes.
   height 1px
-  margin (($baseLineHeight / 2) - 1) 1px  // 8px 1px
+  margin 1px 0  // 8px 1px
   overflow hidden
   background-color top
   border-bottom 1px solid bottom
@@ -284,14 +280,18 @@ nav-divider(top = #e5e5e5, bottom = $white)
 // ------------------
 buttonBackground(startColor, endColor, textColor = #fff, textShadow = 0 -1px 0 rgba(0,0,0,.25))
   // gradientBar will set the background to a pleasing blend of these, to support IE<=9
-  gradientBar(startColor, endColor, textColor, textShadow);
-  *background-color endColor  // Darken IE7 buttons by default so they stand out more given they won't have borders
-
+  // gradientBar(startColor, endColor, textColor, textShadow);
+  background-color startColor  // Darken IE7 buttons by default so they stand out more given they won't have borders
+  color textColor
+  border-color darken(startColor, 4)
+  
   // in these cases the gradient won't cover the background, so we override
-  &:hover, &:focus, &:active, &.active, &.disabled, &[disabled]
+  &:hover, &:focus, &.disabled, &[disabled]
     color textColor
-    background-color endColor
-    *background-color darken(endColor, 5%)
+    background-color lighten(startColor, 5)
+
+  &:active, &.active
+    background-color darken(startColor, 8)
 
 // Navbar vertical align
 // -------------------------

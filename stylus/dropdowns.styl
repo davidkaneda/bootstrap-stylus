@@ -42,13 +42,14 @@
   display none  // none by default, but block on "open" of the menu
   float left
   min-width 160px
-  padding 5px 0
+  padding 2px
   margin 2px 0 0  // override default ul
   list-style none
   background-color $dropdownBackground
   border 1px solid $dropdownBorder
-  border-radius 6px
-  box-shadow 0 5px 10px rgba(0,0,0,.2)
+
+  border-radius $baseBorderRadius
+  box-shadow 0 2px 1px 0 rgba(0,0,0,.1)
   background-clip padding-box
 
   // Aligns the dropdown menu to right
@@ -66,6 +67,7 @@
     padding 3px 20px
     clear both
     font-weight normal
+    border-radius $borderRadiusSmall
     line-height $baseLineHeight
     color $dropdownLinkColor
     white-space nowrap
@@ -152,7 +154,7 @@
   left 100%
   margin-top -6px
   margin-left -1px
-  border-radius 0 6px 6px 6px
+  // border-radius 0 6px 6px 6px
 
 .dropdown-submenu:hover > .dropdown-menu
   display block
@@ -163,7 +165,7 @@
   bottom 0
   margin-top 0
   margin-bottom -2px
-  border-radius 5px 5px 5px 0
+  // border-radius 5px 5px 5px 0
 
 // Caret to indicate there is a submenu
 .dropdown-submenu > a:after
@@ -192,7 +194,7 @@
   > .dropdown-menu
     left -100%
     margin-left 10px
-    border-radius 6px 0 6px 6px
+    // border-radius 6px 0 6px 6px
 
 // Tweak nav headers
 // -----------------
