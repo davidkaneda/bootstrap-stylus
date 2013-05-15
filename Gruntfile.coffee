@@ -10,4 +10,4 @@ module.exports = (grunt) ->
         import: ['nib']
       compile:
         src: 'stylus/bootstrap.styl'
-        dest: 'output/bootstrap.css'
+        dest: 'docs/assets/css/bootstrap.css'
