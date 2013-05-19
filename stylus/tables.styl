@@ -195,17 +195,17 @@ table th[class*="span"],
 // Exact selectors below required to override .table-striped
 
 .table tbody tr
-  &.success > td
-    background-color $successBackground
+  &.success
+    border-left 4px solid $successBorder
 
-  &.error > td
-    background-color $errorBackground
+  &.error
+    border-left 4px solid $errorBorder
 
-  &.warning > td
-    background-color $warningBackground
+  &.warning
+    border-left 4px solid $warningBorder
 
-  &.info > td
-    background-color $infoBackground
+  &.info
+    border-left 4px solid $infoBorder
 
 // Hover states for .table-hover
 .table-hover tbody tr
