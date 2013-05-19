@@ -7,13 +7,13 @@
 
 // Grays
 // -------------------------
-$black =                 #060606;
+$black =                 #040404;
 $grayDarker =            #222;
 $grayDark =              #333;
 $gray =                  #555;
 $grayLight =             #999;
 $grayLighter =           #eee;
-$white =                 #fff;
+$white =                 #f8f8f8;
 
 // Accent colors
 // -------------------------
@@ -44,11 +44,11 @@ $monoFontFamily =        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 $baseFontSize =          14px;
 $baseFontFamily =        $sansFontFamily;
-$baseLineHeight =        20px;
+$baseLineHeight =        21px;
 $altFontFamily =         $serifFontFamily;
 
 $headingsFontFamily =    inherit; // empty to use BS default, $baseFontFamily
-$headingsFontWeight =    bold;    // instead of browser default, bold
+$headingsFontWeight =    500;    // instead of browser default, bold
 $headingsColor =         inherit; // empty to use BS default, $textColor
 
 // Component sizing
@@ -61,7 +61,7 @@ $fontSizeMini =          $baseFontSize * 0.75; // ~11px
 
 $paddingLarge =          11px 19px; // 44px
 $paddingSmall =          2px 10px;  // 26px
-$paddingMini =           1px 6px;   // 24px
+$paddingMini =           1px 6px 0;   // 24px
 
 $baseBorderRadius =      3px;
 $borderRadiusLarge =     6px;
@@ -221,7 +221,7 @@ $successBackground =       #fff;
 $successBorder =           #468847;
 
 $infoText =                #3a87ad;
-$infoBackground =          #d9edf7;
+$infoBackground =          #fff;
 $infoBorder =              darken(spin($infoBackground, -10), 7%);
 
 // Tooltips and popovers

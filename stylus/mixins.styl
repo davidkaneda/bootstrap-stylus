@@ -271,7 +271,7 @@ nav-divider(top = #e5e5e5, bottom = $white)
   // It is unclear where IE is getting the extra space that we need
   // to negative-margin away, but so it goes.
   height 1px
-  margin 1px 0  // 8px 1px
+  margin 2px 0 1px  // 8px 1px
   overflow hidden
   background-color top
   border-bottom 1px solid bottom
@@ -283,8 +283,10 @@ buttonBackground(startColor, endColor, textColor = #fff, textShadow = 0 -1px 0 r
   // gradientBar(startColor, endColor, textColor, textShadow);
   background-color startColor  // Darken IE7 buttons by default so they stand out more given they won't have borders
   color textColor
-  border-color darken(startColor, 4)
-  
+  border-color startColor
+  border-bottom-color darken(startColor, 15)
+  text-shadow 0 -1px 0 darken(startColor, 15)
+
   // in these cases the gradient won't cover the background, so we override
   &:hover, &:focus, &.disabled, &[disabled]
     color textColor
