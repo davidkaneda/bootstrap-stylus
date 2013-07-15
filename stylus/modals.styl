@@ -10,14 +10,15 @@
   bottom 0 
   left 0 
   z-index $zindexModalBackdrop 
-  background-color $black 
+  background-color $gray 
   // Fade for backdrop
-  &.fade
+  &.fade, &.scale
     opacity 0
 
 
 .modal-backdrop,
-.modal-backdrop.fade.in
+.modal-backdrop.fade.in,
+.modal-backdrop.scale.in
   opacity .8
 
 
@@ -34,17 +35,27 @@
   border 1px solid rgba(0,0,0,.3) 
   *border 1px solid #999  /* IE6-7 */
   border-radius 6px
-  box-shadow 0 3px 7px rgba(0,0,0,0.3)
+  // box-shadow 0 3px 7px rgba(0,0,0,0.3)
   background-clip padding-box
   // Remove focus outline from opened modal
-  outline none 
+  outline none
 
-  &.fade
-    transition opacity .3s linear, top .3s ease-out
-    top -25% 
+  // &.fade
+  //   transition opacity .3s linear, top .3s ease-out
+  //   top -25% 
 
-  &.fade.in
-    top 10%
+  // &.fade.in
+  //   top 10%
+
+  &.scale
+    transition all .15s ease-out
+    transform scale(.9)
+    opacity .3
+
+  &.scale.in
+    transform scale(1)
+    opacity 1
+
 
 .modal-header
   padding 9px 15px 
@@ -55,8 +66,6 @@
   h3
     margin 0 
     line-height 30px 
-
-
 
 // Body (where all modal content resides)
 .modal-body
