@@ -284,6 +284,7 @@ buttonBackground(startColor, endColor, textColor = #fff, textShadow = 0 -1px 0 r
   background-color startColor  // Darken IE7 buttons by default so they stand out more given they won't have borders
   color textColor
   box-shadow 0 -2px 0 darken(startColor, 5) inset
+  text-shadow 0 1px 0 darken(startColor, 5)
   border 0
 
   // in these cases the gradient won't cover the background, so we override
@@ -293,6 +294,7 @@ buttonBackground(startColor, endColor, textColor = #fff, textShadow = 0 -1px 0 r
 
   &:active, &.active
     background-color darken(startColor, 3)
+    text-shadow none
 
 // Navbar vertical align
 // -------------------------
