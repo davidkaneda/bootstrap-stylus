@@ -283,7 +283,8 @@ buttonBackground(startColor, endColor, textColor = #fff, textShadow = 0 -1px 0 r
   // gradientBar(startColor, endColor, textColor, textShadow);
   background-color startColor  // Darken IE7 buttons by default so they stand out more given they won't have borders
   color textColor
-  text-shadow 0 -1px 0 darken(startColor, 15)
+  box-shadow 0 -2px 0 darken(startColor, 5) inset
+  border 0
 
   // in these cases the gradient won't cover the background, so we override
   &:hover, &:focus, &.disabled, &[disabled]
@@ -291,7 +292,7 @@ buttonBackground(startColor, endColor, textColor = #fff, textShadow = 0 -1px 0 r
     background-color lighten(startColor, 5)
 
   &:active, &.active
-    background-color darken(startColor, 8)
+    background-color darken(startColor, 3)
 
 // Navbar vertical align
 // -------------------------

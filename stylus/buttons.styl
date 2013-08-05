@@ -10,7 +10,7 @@
   display inline-block
   padding 3px 12px
   margin-bottom 0  // For input.btn
-  font-size $baseFontSize
+  font-size 12px
   line-height $baseLineHeight
   text-align center
   vertical-align middle
@@ -116,7 +116,8 @@ input[type="button"]
 // Set the backgrounds
 // -------------------------
 .btn-primary
-  buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+  // buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+  buttonBackground($brandColor, lighten($brandColor, 10));
 
 // Warning appears are orange
 .btn-warning
