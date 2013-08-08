@@ -69,7 +69,7 @@
   position relative 
   overflow-y auto 
   max-height 400px 
-  padding 15px 
+  padding 15px
 
 // Remove bottom margin if need be
 .modal-form
@@ -98,3 +98,13 @@
   // and override it for block buttons as well
   .btn-block + .btn-block
     margin-left 0 
+
+
+@media (max-height: 550px)
+  .modal
+    overflow-y auto
+    top 10px
+    bottom 10px
+
+  .modal-body
+    max-height 100%
